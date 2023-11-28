@@ -1,23 +1,31 @@
 .container{
-
-}
-
-.item{
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        'header header'
+        'sidebar content';
+    gap: 10px;
+    grid-template-columns: 150px 1fr;
+    grid-template-rows: 90px 1fr;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .header{
-
+    grid-area: header;
+    padding: 5px 5px 5px 20px;
 }
 
 .sidebar{
-
+    display: flex;
+    grid-area: sidebar;
 }
 
-.text{
-
+.sidebar ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .pic{
-height: 100px;
-width: 100px;
+height: 400px;
 }
