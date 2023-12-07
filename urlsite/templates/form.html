@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div xmlns="http://www.w3.org/1999/html">
+    <h>Comments</h>
+    <form autocomplete="off" action="{% url 'form' %}" method="post">
+
+        {% csrf_token %}
+        <label for="firstName">First Name</label>
+        <input name="firstName" type="text" />
+        <label for="lastName">Last Name</label>
+        <input name="lastName" type="text" />
+        <label for="email">E-mail</label>
+        <input name="email" type="text" />
+        <label for="text">Write your review</label>
+        <textarea name="text" type="text" /></textarea>
+        <button type="submit">Send</button>
+    </form>
+    <div>
+        {% for comment in forms %}
+        <div>
+            <div>Name: {{ comment.firstName }}</div>
+            <div>Review: {{ comment.text }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

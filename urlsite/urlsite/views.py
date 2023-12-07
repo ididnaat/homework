@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-MENU = {"HOME": "/", "About": "/about"}
+MENU = {"HOME": "/", "About": "/about", "Reviews": "/form"}
 CHARACTER = {"Leon Kennedy": "/leon", "Jill Valentine": "/jill", "Chris Redfield": "/chris"}
 def main_page(request):
     title = "RESIDENT EVIL"
