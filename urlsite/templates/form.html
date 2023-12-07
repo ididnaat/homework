@@ -5,7 +5,6 @@
 <div xmlns="http://www.w3.org/1999/html">
     <h>Comments</h>
     <form autocomplete="off" action="{% url 'form' %}" method="post">
-
         {% csrf_token %}
         <label for="firstName">First Name</label>
         <input name="firstName" type="text" />
